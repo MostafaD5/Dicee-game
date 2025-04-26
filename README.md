@@ -1,25 +1,26 @@
 # 🎲 Dicee Game
 
-A simple and fun dice game where two players roll a die, and the higher number wins! Built using HTML, CSS, and JavaScript.
+Welcome to the Dicee Game! It's a simple game where two players roll dice, and the player with the highest roll wins. If the rolls are the same, it’s a draw!
 
-## 🔗 Live Demo
+## 💡 Features
+- **Random Dice Roll**: Each time the page is refreshed, a random number is generated, and the dice images are updated.
+- **Winner Determination**: The game shows which player wins based on the higher dice roll.
+- **"Play Again" Button**: After each roll, you can refresh the game by clicking the "Play Again" button.
+- **Responsive Design**: The game is mobile-friendly and adjusts to different screen sizes.
 
-👉 [Play the Dicee Game](https://mostafad5.github.io/Dicee-game/)  
+## 🚀 Live Demo
 
-> *(Make sure GitHub Pages is enabled on the repo settings to make this link work)*
+You can play the game here:  
+[Live Demo](https://mostafad5.github.io/Dicee-game/)
 
----
+## 🛠️ Technologies Used
+- **HTML**
+- **CSS**
+- **JavaScript**
 
-## 🛠️ Built With
+## 🔧 How to Run Locally
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
+1. Clone this repository to your local machine:
 
----
-
-## 🚀 How to Run Locally
-
-1. Clone the repository:
    ```bash
    git clone https://github.com/MostafaD5/Dicee-game.git

@@ -1,15 +1,27 @@
 const randomNumber1 = Math.floor(Math.random() * 6) + 1;
-const randomDiceeimg = "images/dice" + randomNumber1 + ".png";
-const img1 = document.querySelectorAll("img")[0];
-img1.setAttribute("src", randomDiceeimg);
 const randomNumber2 = Math.floor(Math.random() * 6) + 1;
-const randomDiceeimg2 = "images/dice" + randomNumber2 + ".png";
-const img2 = document.getElementsByClassName("img2")[0];
-img2.setAttribute("src", randomDiceeimg2);
+
+// Set dice images dynamically
+document
+  .querySelector(".img1")
+  .setAttribute("src", `images/dice${randomNumber1}.png`);
+document
+  .querySelector(".img2")
+  .setAttribute("src", `images/dice${randomNumber2}.png`);
+
+// Determine the winner and update the heading
+const title = document.querySelector("h1");
+
 if (randomNumber1 > randomNumber2) {
-  document.querySelector("h1").innerHTML = "Player 1 wins";
-} else if (randomNumber2 > randomNumber1) {
-  document.querySelector("h1").innerHTML = "Player 2 wins";
+  title.textContent = "🚩 Player 1 Wins!";
+} else if (randomNumber1 < randomNumber2) {
+  title.textContent = "Player 2 Wins! 🚩";
 } else {
-  document.querySelector("h1").innerHTML = "Draw";
+  title.textContent = "Draw!";
 }
+
+// Play Again button functionality
+document.querySelector(".play-again").addEventListener("click", function () {
+  // Reload the page when clicked
+  window.location.reload();
+});

@@ -1,11 +1,18 @@
 body {
     background-color: #393E46;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
 }
 
 .container {
-    width: 70%;
-    margin: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -24,8 +31,7 @@ p {
 
 .dice {
     text-align: center;
-    display: inline-block;
-    padding: 7px;
+    animation: shake 0.6s ease;
 }
 
 footer {
@@ -34,4 +40,62 @@ footer {
     text-align: center;
     font-family: 'Indie Flower', cursive;
 
+}
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* Play Again Button Styling */
+.play-again {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.play-again:hover {
+    background-color: #e55347;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dice img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
 }
